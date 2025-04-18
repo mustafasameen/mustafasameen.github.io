@@ -22,9 +22,7 @@ h4 {
 .paper {
   margin-bottom: 20px;
 }
-.paper .title {
-  /*text-transform: uppercase; */
-}
+/* Removed empty rule .paper .title */
 .paper p {
   margin-bottom: 2px;
 }
