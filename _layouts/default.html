@@ -1,62 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <!-- Basic Page Needs
+    <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>{{ site.data.main_info.name }}</title>
-  <meta name="description" content="Homepage of Mustafa Sameen">
-  <meta name="author" content="Mustafa Sameen">
+    <meta charset="utf-8">
+    <title>{{ site.data.main_info.name }}</title>
+    <meta name="description" content="Homepage of Mustafa Sameen">
+    <meta name="author" content="Mustafa Sameen">
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600'
+      rel='stylesheet' type='text/css'>
 
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" | prepend: site.baseurl }}>
-  <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend: site.baseurl }}>
+    <link rel="stylesheet" href={{ "/libs/external/skeleton/normalize.css" |
+      prepend: site.baseurl }}>
+    <link rel="stylesheet" href={{ "/libs/external/skeleton/skeleton.css" |
+      prepend: site.baseurl }}>
+    <link rel="stylesheet" href={{ "/libs/custom/my_css.css" | prepend:
+      site.baseurl }}>
 
-  <!-- JQuery
+    <!-- JQuery
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl }}></script>
+    <script src={{ "/libs/external/jquery-3.1.1.min.js" | prepend: site.baseurl
+      }}></script>
 
-  <!-- Font-Awesome
+    <!-- Font-Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/font-awesome-4.7.0/css/font-awesome.min.css" | prepend: site.baseurl }}>
+    <link rel="stylesheet" href={{
+      "/libs/external/font-awesome-4.7.0/css/font-awesome.min.css" | prepend:
+      site.baseurl }}>
 
-  <!-- Academicons
+    <!-- Academicons
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/academicons-1.8.6/css/academicons.min.css" | prepend: site.baseurl }}>
+    <link rel="stylesheet" href={{
+      "/libs/external/academicons-1.8.6/css/academicons.min.css" | prepend:
+      site.baseurl }}>
 
-  <!-- Skeleton tabs
+    <!-- Skeleton tabs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/skeleton_tabs/skeleton-tabs.css" | prepend: site.baseurl }}>
-  <script src={{ "/libs/external/skeleton_tabs/skeleton-tabs.js" | prepend: site.baseurl }}></script>
+    <link rel="stylesheet" href={{
+      "/libs/external/skeleton_tabs/skeleton-tabs.css" | prepend: site.baseurl
+      }}>
+    <script src={{ "/libs/external/skeleton_tabs/skeleton-tabs.js" | prepend:
+      site.baseurl }}></script>
 
-  <!-- Timeline
+    <!-- Timeline
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href={{ "/libs/external/timeline.css" | prepend: site.baseurl }}>
+    <link rel="stylesheet" href={{ "/libs/external/timeline.css" | prepend:
+      site.baseurl }}>
 
-  <!-- Scripts
+    <!-- Scripts
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link rel="stylesheet" href={{ "/libs/external/github-prettify-theme.css" | prepend: site.baseurl }}>-->
-  <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
+    <!--<link rel="stylesheet" href={{ "/libs/external/github-prettify-theme.css" | prepend: site.baseurl }}>-->
+    <script src={{ "/libs/custom/my_js.js" | prepend: site.baseurl }}></script>
 
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!-- <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
+    <!-- <link rel="icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}>
   <link rel="shortcut icon" type="image/png" href={{ "/libs/icon.png" | prepend: site.baseurl }}> -->
-  <link rel="shortcut icon" type="image/png" href=/assets/website-logo/panda-bear.png>
+    <link rel="shortcut icon" type="image/png"
+      href=/assets/website-logo/panda-bear.png>
 
-  <!-- Inline Styles for Smooth Scrolling and Active Link -->
-  <style>
+    <!-- Inline Styles for Smooth Scrolling and Active Link -->
+    <style>
     html {
       scroll-behavior: smooth;
     }
@@ -72,73 +86,95 @@
       height: 20px;
     }
   </style>
-</head>
-<body>
+  </head>
+  <body>
 
-  <!-- Primary Page Layout
+    <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
+    <div class="container">
 
-    <section class="header">
-      <div class="row">
-        <div class="four columns">
-          <a href="{{ site.baseurl }}/"><img class="u-max-full-width" src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}' style="max-width: 225px;"></a>
-        </div>
-        <div class="six columns main-description">
+      <section class="header">
+        <div class="row">
+          <div class="four columns">
+            <a href="{{ site.baseurl }}/"><img class="u-max-full-width"
+                src='{{ site.baseurl }}{{ site.data.main_info.profile_pic }}'
+                style="max-width: 225px;"></a>
+          </div>
+          <div class="six columns main-description">
             <h1>{{ site.data.main_info.name }}</h1>
             <p>{{ site.data.main_info.title }}</p>
             <p>{{ site.data.main_info.email }}</p>
-            <p>
-              <span onclick="window.open('{{ site.data.main_info.cv }}')" style="cursor: pointer">
-                <i class="fa fa-download" aria-hidden="true"></i>
-              </span>
-              
-<!--              <span onclick="window.open('{{ site.data.main_info.semantic_scholar }}')" style="cursor: pointer">-->
-<!--                <i class="ai fa ai-semantic-scholar-square" aria-hidden="true"></i>-->
-<!--              </span>-->
+            <div class="paper-buttons">
+              <a class="button" href="{{ site.data.main_info.cv }}"
+                target="_blank">
+                <i class="fa fa-file"
+                  aria-hidden="true"></i><span>CV</span>
+              </a>
 
-<!--              <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">-->
-<!--                <i class="ai fa ai-google-scholar-square" aria-hidden="true"></i>-->
-<!--              </span>-->
+              <a class="button" href="{{ site.data.main_info.github }}"
+                target="_blank">
+                <i class="fa fa-github"
+                  aria-hidden="true"></i><span>Github</span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              </span>
+              <a class="button"
+                href="{{ site.data.main_info.linkedin }}"
+                target="_blank">
+                <i class="fa fa-linkedin-square"
+                  aria-hidden="true"></i><span>Linkedin</span>
+              </a>
 
-              <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
-            </p>
+              <!-- <a class="button"
+                href="{{ site.data.main_info.semantic_scholar }}"
+                target="_blank">
+                <i class="fa fa-semantic-scholar-square"
+                  aria-hidden="true"></i><span>Semantic Scholar</span>
+              </a>
+
+              <a class="button"
+                href="{{ site.data.main_info.google_scholar }}"
+                target="_blank">
+                <i class="fa fa-google-scholar-square"
+                  aria-hidden="true"></i><span>Google Scholar</span>
+              </a> -->
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="navbar-spacer"></div>
-    <nav class="navbar">
-      <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#about" | prepend: site.baseurl }}>Bio</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#news" | prepend: site.baseurl }}>News</a></li>
-          <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#education" | prepend: site.baseurl }}>Education</a></li> -->
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#publications" | prepend: site.baseurl }}>Publications</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#projects" | prepend: site.baseurl }}>Projects</a></li>
-          <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#resume" | prepend: site.baseurl }}>CV</a></li>
-        </ul>
-    </nav>
+      <div class="navbar-spacer"></div>
+      <nav class="navbar">
+        <div class="container">
+          <ul class="navbar-list">
+            <li class="navbar-item"><a class="navbar-link" href={{
+                "/index.html#about" | prepend: site.baseurl }}>Bio</a></li>
+            <li class="navbar-item"><a class="navbar-link" href={{
+                "/index.html#news" | prepend: site.baseurl }}>News</a></li>
+            <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#education" | prepend: site.baseurl }}>Education</a></li> -->
+            <li class="navbar-item"><a class="navbar-link" href={{
+                "/index.html#publications" | prepend: site.baseurl
+                }}>Publications</a></li>
+            <li class="navbar-item"><a class="navbar-link" href={{
+                "/index.html#projects" | prepend: site.baseurl
+                }}>Projects</a></li>
+            <li class="navbar-item"><a class="navbar-link" href={{
+                "/index.html#resume" | prepend: site.baseurl }}>CV</a></li>
+          </ul>
+        </nav>
 
-    {{ content}}
+        {{ content}}
 
-    <div class="footer">
-      <div class="row">
-        <div class="four columns">
-          {{ site.data.main_info.name }}
-        </div>
-        <div class="four columns">
-          Last updated on <span id="last-updated"></span>
-        </div>
+        <div class="footer">
+          <div class="row">
+            <div class="four columns">
+              {{ site.data.main_info.name }}
+            </div>
+            <div class="four columns">
+              Last updated on <span id="last-updated"></span>
+            </div>
 
-        <!-- Inline JS for Last Updated Date and Smooth Scrolling -->
-        <script>
+            <!-- Inline JS for Last Updated Date and Smooth Scrolling -->
+            <script>
           // Update "Last Updated" Date
           document.addEventListener('DOMContentLoaded', function () {
             const currentDate = new Date();
@@ -177,35 +213,38 @@
           });
         </script>
 
-        <div class="four columns">
-          <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
+            <div class="four columns">
+              <!-- <span onclick="window.open('{{ site.data.main_info.twitter }}')" style="cursor: pointer">
             <i class="fa fa-twitter" aria-hidden="true"></i>
           </span> -->
-          <span onclick="window.open('{{ site.data.main_info.cv }}')" style="cursor: pointer">
-            <i class="fa fa-download" aria-hidden="true"></i>
-          </span>
-<!--          <span onclick="window.open('{{ site.data.main_info.semantic_scholar }}')" style="cursor: pointer">-->
-<!--            <i class="ai ai-semantic-scholar-square" aria-hidden="true"></i>-->
-<!--          </span>-->
-<!--          <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">-->
-<!--            <i class="ai ai-google-scholar-square" aria-hidden="true"></i>-->
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor: pointer">
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor: pointer">
-            <i class="fa fa-github" aria-hidden="true"></i>
-          </span>
+              <span onclick="window.open('{{ site.data.main_info.cv }}')"
+                style="cursor: pointer">
+                <i class="fa fa-download" aria-hidden="true"></i>
+              </span>
+              <!--          <span onclick="window.open('{{ site.data.main_info.semantic_scholar }}')" style="cursor: pointer">-->
+              <!--            <i class="ai ai-semantic-scholar-square" aria-hidden="true"></i>-->
+              <!--          </span>-->
+              <!--          <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor: pointer">-->
+              <!--            <i class="ai ai-google-scholar-square" aria-hidden="true"></i>-->
+            </span>
+            <span onclick="window.open('{{ site.data.main_info.linkedin }}')"
+              style="cursor: pointer">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </span>
+            <span onclick="window.open('{{ site.data.main_info.github }}')"
+              style="cursor: pointer">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </span>
+          </div>
         </div>
       </div>
+
     </div>
 
-  </div>
+    <!-- Google Analytics -->
+    {% include google_analytics.html %}
 
-  <!-- Google Analytics -->
-  {% include google_analytics.html %}
-
-<!-- End Document
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+  </body>
 </html>

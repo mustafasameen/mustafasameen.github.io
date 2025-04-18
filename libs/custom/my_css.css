@@ -28,17 +28,34 @@ h4 {
 .paper p {
   margin-bottom: 2px;
 }
-.paper-buttons {
-  margin-top: 5px;
+
+/* wrapper row */
+.paper-buttons{
+  margin-top:5px;
+  display:flex;          /* lay buttons out horizontally */
+  flex-wrap:wrap;
+  gap:8px;               /* space between buttons */
 }
-.paper .button {
-  display: inline-block;
-  height: 25px;
-  padding: 0 25px;
-  font-weight: 100;
-  line-height: 25px;
-  text-transform: none;
+
+/* each button */
+.paper-buttons .button{
+  display:inline-flex;   /* icon + text become flex items */
+  align-items:center;    /* vertical‑centre them */
+  gap:6px;               /* space between icon and text */
+  height:26px;           /* any fixed height you like */
+  padding:0 13px;
+  line-height:1;         /* kill extra baseline space */
+  font-weight:400;
+  text-transform:none;
+  text-decoration:none;  /* remove underline if needed */
 }
+
+/* icon tweaks */
+.paper-buttons .button i{
+  font-size:1.2em;
+  line-height:0;         /* prevent icon from pushing down */
+}
+
 
 /* Enhanced image styling with shadow effect */
 .paper-image img,
