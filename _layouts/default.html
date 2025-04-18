@@ -150,7 +150,6 @@
                 "/index.html#about" | prepend: site.baseurl }}>Bio</a></li>
             <li class="navbar-item"><a class="navbar-link" href={{
                 "/index.html#news" | prepend: site.baseurl }}>News</a></li>
-            <!-- <li class="navbar-item"><a class="navbar-link" href={{ "/index.html#education" | prepend: site.baseurl }}>Education</a></li> -->
             <li class="navbar-item"><a class="navbar-link" href={{
                 "/index.html#publications" | prepend: site.baseurl
                 }}>Publications</a></li>
@@ -170,47 +169,36 @@
               {{ site.data.main_info.name }}
             </div>
             <div class="four columns">
-              Last updated on <span id="last-updated"></span>
+              Last updated on {{ site.time | date: "%B %d, %Y" }}
             </div>
 
             <!-- Inline JS for Last Updated Date and Smooth Scrolling -->
             <script>
-          // Update "Last Updated" Date
-          document.addEventListener('DOMContentLoaded', function () {
-            const currentDate = new Date();
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('last-updated').textContent = currentDate.toLocaleDateString('en-US', options);
-          });
+
 
           // Smooth Scrolling with Offset and Active Link Highlight
-          document.querySelectorAll('.navbar-link').forEach(link => {
-            link.addEventListener('click', function(event) {
-              event.preventDefault();
+          // ----- Scroll‑spy for navbar ------------------------------------------
+const navLinks = document.querySelectorAll('.navbar-link');
+const sections  = [...navLinks].map(link => {
+  const url = new URL(link.getAttribute('href'), window.location.href);
+  return document.getElementById(url.hash.substring(1));
+});
 
-              // Remove "active" class from all links
-              document.querySelectorAll('.navbar-link').forEach(el => el.classList.remove('active'));
+function setActive(idx){
+  navLinks.forEach(l => l.classList.remove('active'));
+  if (idx >= 0) navLinks[idx].classList.add('active');
+}
 
-              // Add "active" class to the clicked link
-              this.classList.add('active');
+function onScroll(){
+  const scrollPos = window.scrollY + 90;          // 90 px ≈ navbar + margin
+  let current = sections.findIndex((sec, i) =>
+    scrollPos < (sections[i+1]?.offsetTop || Infinity));
+  setActive(current);
+}
 
-              // Extract the target id
-              const href = this.getAttribute('href');
-              const url = new URL(href, window.location.href);
-              const targetId = url.hash.substring(1);
+window.addEventListener('scroll', onScroll);
+onScroll();                                       // run once on load
 
-              const targetElement = document.getElementById(targetId);
-              if (targetElement) {
-                const offset = -80; // Adjust offset as needed
-                const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition + offset;
-
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: 'smooth'
-                });
-              }
-            });
-          });
         </script>
 
             <div class="four columns">

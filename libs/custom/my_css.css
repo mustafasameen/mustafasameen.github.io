@@ -50,6 +50,18 @@ h4 {
   text-decoration:none;  /* remove underline if needed */
 }
 
+.paper-buttons a.button{
+  display: inline-flex;        /* lets icon + text share one line    */
+  align-items: center;         /* vertically center them             */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  gap: 6px;                    /* space between icon & text          */
+  white-space: nowrap;
+}
+
 /* icon tweaks */
 .paper-buttons .button i{
   font-size:1.2em;
