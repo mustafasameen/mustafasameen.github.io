@@ -53,7 +53,7 @@ h4 {
 
 .paper-image img:hover,
 .placeholder-image:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Paper container spacing to accommodate shadow */

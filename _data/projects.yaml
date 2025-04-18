@@ -1,21 +1,15 @@
 projects:
+  # - title: "SCAC Esports Statistics Tracker"
+  #   subtitle: "Built an OCR-powered system for automated esports data extraction, match outcome prediction (75% accuracy), and real-time analytics for SCAC tournaments."
+  #   thumbnail: "/assets/projects/esports_tracker.png"
+  #   url: "https://github.com/jcandrews2/senior-capstone-project"
+  #   frameworks: ["React", "Flask", "OCR"]
+  #   selected: y
+
   - title: "SCAC Esports Statistics Tracker"
-    subtitle: "Built an OCR-powered system for automated esports data extraction, match outcome prediction (75% accuracy), and real-time analytics for SCAC tournaments."
-    thumbnail: "/assets/projects/esports_tracker.png"
-    url: "https://github.com/jcandrews2/senior-capstone-project"
-    frameworks: ["React", "Flask", "OCR"]
-    selected: y
-
-  - title: "Javacademy"
-    subtitle: "An Android Java quizz app."
-    thumbnail: "/assets/projects/javacademy.jpg"
-    url: "https://github.com/mustafasameen/Javacademy"
-    frameworks: ["Android", "Java", "Firebase"]
-    selected: y
-
-  - title: "Valentines Interactive Proposal"
-    subtitle: "Interactive valentine's day proposal website."
-    thumbnail: "/assets/projects/interactive-proposal.png"
-    url: "https://github.com/mustafasameen/valentines-day-interactive-proposal"
-    frameworks: ["React", "CSS3", "Framer"]
-    selected: y
+    subtitle: "Built an OCR-powered system for automated esports data extraction, match outcome prediction, and real-time analytics for SCAC tournaments."
+    year: 2025
+    frameworks: '<p style="color:#4a6fa5;">React, Flask, OCR</p>'
+    selected: n
+    image: "assets/projects/2025-esports-tracker/thumbnail.png"
+    code: "https://github.com/jcandrews2/senior-capstone-project"

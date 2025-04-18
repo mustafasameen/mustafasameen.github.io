@@ -193,6 +193,45 @@ title: Home
   </div>
 </div>
 
+<!-- ========== PROJECTS ========== -->
+<div class="docs-section" id="projects">
+  <h4>Projects</h4>
+  
+  <div class="tab-content">
+    <!-- Tab: All Projects -->
+    <div class="tab-pane-active" id="papers-all">
+      {% assign projectsall = site.data.projects.projects %}
+      {% for project in projectsall %}
+      <div class="paper">
+        <div class="paper-container">
+          <div class="paper-image">
+            {% if project.image %}
+            <img src="{{ project.image }}" alt="Paper thumbnail">
+            {% else %}
+            <div class="placeholder-image"></div>
+            {% endif %}
+          </div>
+          <div class="paper-content">
+            <p class="title"><b>{{ project.title }}</b></p>
+            <p>{{ project.frameworks }}</p>
+            <p class="subtitle">{{ project.subtitle }}</p>
+            <p><i>{{ project.venue }}</i></p>
+            <div class="paper-buttons">
+              {% if project.paper_pdf %}
+              <a class="button" href="{{ project.paper_pdf }}" target="_blank">Paper</a>
+              {% endif %}
+              {% if project.code %}
+              <a class="button" href="{{ project.code }}" target="_blank">Code</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 <!-- ========== Mentee ========== -->
 <!-- <div class="docs-section" id="mentee">
   <h4>Mentee</h4>
