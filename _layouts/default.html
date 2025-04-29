@@ -105,6 +105,11 @@
             <p>{{ site.data.main_info.title }}</p>
             <p>{{ site.data.main_info.email }}</p>
             <div class="paper-buttons">
+              <a class="button" href="mailto:{{ site.data.main_info.email }}"
+                target="_blank">
+                <i class="fa fa-envelope"
+                  aria-hidden="true"></i><span>Email</span>
+              </a>
               <a class="button" href="{{ site.data.main_info.cv }}"
                 target="_blank">
                 <i class="fa fa-file"
