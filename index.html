@@ -7,304 +7,220 @@ title: Home
   <br>
   <h4>Bio</h4>
   <p>
-    I am an incoming PhD student at the <a href="https://www.ufl.edu">University
-      of Florida</a>, working with <a
-      href="https://www.essie.ufl.edu/people/name/xilei-zhao/">Dr. Xilei
-      Zhao</a> in the <a href="https://faculty.eng.ufl.edu/sermos-lab/">SERMoS
-      Lab</a> at the intersection of <b>Artificial Intelligence</b> and
-    <b>Transportation Engineering</b>. My current research focuses on developing
-    interpretable machine learning models with fairness constraints for
-    transportation systems, including a unified framework for addressing
-    fairness across the entire travel modeling pipeline (trip generation,
-    destination distribution, mode choice, and traffic assignment). I am also
-    exploring bi-directional fairness frameworks to prevent biases from
-    propagating between modeling stages.
-  </p>
-  <p>
-    I will graduating from <a href="https://www.coloradocollege.edu">Colorado
-      College</a> this May with a double major in <b>Computer Science</b> and
-    <b>Mathematics</b>, where I developed <b>FORMAL</b>—an AI system that
-    integrates Retrieval-Augmented Thinking and agentic feedback loops for
-    translating informal mathematics into Lean 4 code with 92% syntactic
-    correctness.
-  </p>
-  <p>
-    My research interests include <b>LLM Agents</b>, <b>Trustworthy AI</b>, and
-    <b>AI for Transportation</b>. I'm particularly excited about:
-  </p>
-  <ul>
-    <li>Designing interpretable and fair AI models for transportation demand
-      forecasting that balance predictive accuracy with equity
-      considerations</li>
-    <li>Developing integrated approaches to ensure fairness across multi-stage
-      travel modeling pipelines</li>
-    <li>Creating real-time digital twins powered by LLM-based agents for
-      adaptive transportation systems monitoring and management</li>
-    <li>Building robust validation frameworks for agent-based transportation
-      models with resource-efficient architectures</li>
-  </ul>
-</div>
-
-<!-- ========== NEWS ========== -->
-<div class="docs-section" id="news">
-  <h4>News</h4>
-
-  <ul class="tab-nav">
-    <li><div class="button active" data-ref="#news-2025">2025</div></li>
-    <!-- <li><div class="button" data-ref="#news-2024">2024</div></li>
-    <li><div class="button" data-ref="#news-2023">2023-Past</div></li> -->
-  </ul>
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="news-2025">
-      {% assign news2025 = site.data.news.news | where: "year", "2025" %}
-      {% for news in news2025 %}
-      <div class="news">
-        <li>{{ news.content }}</li>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- <div class="tab-pane" id="news-2024">
-      {% assign news2024 = site.data.news.news | where: "year", "2024" %}
-      {% for news in news2024 %}
-        <div class="news">
-          <li>{{ news.content }}</li>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="news-2023">
-      {% assign news2023 = site.data.news.news | where: "year", "2023" %}
-      {% for news in news2023 %}
-        <li>{{ news.content }}</li>
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="news-2022">
-      {% assign news2022 = site.data.news.news | where: "year", "2022" %}
-      {% for news in news2022 %}
-        <div class="news">
-          <li>{{ news.content }}</li>
-        </div>
-      {% endfor %}
-    </div> -->
-
-  </div>
-</div>
-
-<!-- ========== Education ========== -->
-<!-- <div class="docs-section" id="education">
-  <h5>Education</h5>
-  <div class="paper">
-    <p class="title"><b>Colorado College<b style="float:right;">Aug. 2021 - Present</b></b></p>
-
-    <p>B.A. in Computer Science & Mathematics</p>
-    <p></p>
+    {% assign bio = site.data.bio.bio %}
+    {{ bio }}
   </div>
 
-  <div class="paper">
-    <p class="title"><b>Dartmouth College<b style="float:right;">Dec. 2023 - Jan. 2024</b></b></p>
+  <!-- ========== NEWS ========== -->
+  <div class="docs-section" id="news">
+    <h4>News</h4>
 
-    <p>Tuck Bridge Program</p>
-    <p></p>
-  </div> -->
-
-<!-- ========== PUBLICATIONS ========== -->
-<div class="docs-section" id="publications">
-  <h4>Publications</h4>
-  <ul class="tab-nav">
-    <li><div class="button active"
-        data-ref="#papers-preprint">Preprint</div></li>
-    <li><div class="button" data-ref="#papers-2025">2025</div></li>
-    <li><div class="button" data-ref="#papers-all">All</div></li>
-  </ul>
-
-  <div class="tab-content">
-    <!-- Tab: Preprint -->
-    <div class="tab-pane active" id="papers-preprint">
-      {% assign paperspreprint = site.data.publications.papers | where: "year",
-      "preprint" %}
-      {% for paper in paperspreprint %}
-      <div class="paper">
-        <div class="paper-container">
-          <div class="paper-image">
-            {% if paper.image %}
-            <img src="{{ paper.image }}" alt="Paper thumbnail">
-            {% else %}
-            <div class="placeholder-image"></div>
-            {% endif %}
-          </div>
-          <div class="paper-content">
-            <p class="title"><b>{{ paper.title }}</b></p>
-            <p>{{ paper.authors }}</p>
-            <p><i>{{ paper.venue }}</i></p>
-            <div class="paper-buttons">
-              {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank"><i
-                  class="fa fa-file" aria-hidden="true"></i> Paper</a>
-              {% endif %}
-              {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank"><i
-                  class="fa fa-code" aria-hidden="true"></i> Code</a>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- Tab: 2025 -->
-    <div class="tab-pane" id="papers-2025">
-      {% assign papers2025 = site.data.publications.papers | where: "year",
-      "2025" %}
-      {% for paper in papers2025 %}
-      <div class="paper">
-        <div class="paper-container">
-          <div class="paper-image">
-            {% if paper.image %}
-            <img src="{{ paper.image }}" alt="Paper thumbnail">
-            {% else %}
-            <div class="placeholder-image"></div>
-            {% endif %}
-          </div>
-          <div class="paper-content">
-            <p class="title"><b>{{ paper.title }}</b></p>
-            <p>{{ paper.authors }}</p>
-            <p><i>{{ paper.venue }}</i></p>
-            <div class="paper-buttons">
-              {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank"><i
-                  class="fa fa-file" aria-hidden="true"></i> Paper</a>
-              {% endif %}
-              {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank"><i
-                  class="fa fa-code" aria-hidden="true"></i> Code</a>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!-- Tab: All Papers -->
-    <div class="tab-pane" id="papers-all">
-      {% assign papersall = site.data.publications.papers %}
-      {% for paper in papersall %}
-      <div class="paper">
-        <div class="paper-container">
-          <div class="paper-image">
-            {% if paper.image %}
-            <img src="{{ paper.image }}" alt="Paper thumbnail">
-            {% else %}
-            <div class="placeholder-image"></div>
-            {% endif %}
-          </div>
-          <div class="paper-content">
-            <p class="title"><b>{{ paper.title }}</b></p>
-            <p>{{ paper.authors }}</p>
-            <p><i>{{ paper.venue }}</i></p>
-            <div class="paper-buttons">
-              {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf }}" target="_blank"><i
-                  class="fa fa-file" aria-hidden="true"></i> Paper</a>
-              {% endif %}
-              {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank"><i
-                  class="fa fa-code" aria-hidden="true"></i> Code</a>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-<!-- ========== PROJECTS ========== -->
-<div class="docs-section" id="projects">
-  <h4>Projects</h4>
-
-  <div class="tab-content">
-    <!-- Tab: All Projects -->
-    <div class="tab-pane-active" id="papers-all">
-      {% assign projectsall = site.data.projects.projects %}
-      {% for project in projectsall %}
-      <div class="paper">
-        <div class="paper-container">
-          <div class="paper-image">
-            {% if project.image %}
-            <img src="{{ project.image }}" alt="Paper thumbnail">
-            {% else %}
-            <div class="placeholder-image"></div>
-            {% endif %}
-          </div>
-          <div class="paper-content">
-            <p class="title"><b>{{ project.title }}</b></p>
-            <p>{{ project.frameworks }}</p>
-            <p class="subtitle">{{ project.subtitle }}</p>
-            <p><i>{{ project.venue }}</i></p>
-            <div class="paper-buttons">
-              {% if project.paper_pdf %}
-              <a class="button" href="{{ project.paper_pdf }}"
-                target="_blank"><i class="fa fa-file" aria-hidden="true"></i>
-                Paper</a>
-              {% endif %}
-              {% if project.code %}
-              <a class="button" href="{{ project.code }}" target="_blank"><i
-                  class="fa fa-code" aria-hidden="true"></i> Code</a>
-              {% endif %}
-            </div>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</div>
-
-<!-- ========== Mentee ========== -->
-<!-- <div class="docs-section" id="mentee">
-  <h4>Mentee</h4>
-  <p>
-  <b>Haiyun Lyu</b>  (UNC), Sep 2024 - <br>
-  </p> 
-
-</div> -->
-
-<!-- ========== RESUME ========== -->
-<div class="docs-section" id="resume">
-  <h4>Vitæ</h4>
-
-  <div class="paper-buttons">
-    <a class="button" href="{{ site.data.main_info.cv }}"
-      target="_blank">
-      <i class="fa fa-file"
-        aria-hidden="true"></i><span>CV</span>
-    </a>
-  </div>
-
-  <!-- The Timeline -->
-  <ul class="timeline">
-    {% for exp in site.data.experience.experiences %}
-    <li>
-      {% if exp.category == "left" %}
-      <div class="direction-l">
-        {% else %}
-        <div class="direction-r">
-          {% endif %}
-          <div class="flag-wrapper">
-            <span class="flag">{{ exp.place }}</span>
-            <span class="time-wrapper"><span class="time">{{ exp.time
-                }}</span></span>
-          </div>
-          <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
-            }}</div>
-        </div>
-      </li>
-      {% endfor %}
+    <ul class="tab-nav">
+      <li><div class="button active" data-ref="#news-2025">2025</div></li>
     </ul>
+
+    <div class="tab-content">
+      <div class="tab-pane active" id="news-2025">
+        {% assign news2025 = site.data.news.news | where: "year", "2025" %}
+        {% for news in news2025 %}
+        <div class="news">
+          <li>{{ news.content }}</li>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
   </div>
+
+  <!-- ========== PUBLICATIONS ========== -->
+  <div class="docs-section" id="publications">
+    <h4>Publications</h4>
+    <ul class="tab-nav">
+      <li><div class="button active"
+          data-ref="#papers-preprint">Preprint</div></li>
+      <li><div class="button" data-ref="#papers-2025">2025</div></li>
+      <li><div class="button" data-ref="#papers-all">All</div></li>
+    </ul>
+
+    <div class="tab-content">
+      <!-- Tab: Preprint -->
+      <div class="tab-pane active" id="papers-preprint">
+        {% assign paperspreprint = site.data.publications.papers | where:
+        "year",
+        "preprint" %}
+        {% for paper in paperspreprint %}
+        <div class="paper">
+          <div class="paper-container">
+            <div class="paper-image">
+              {% if paper.image %}
+              <img src="{{ paper.image }}" alt="Paper thumbnail">
+              {% else %}
+              <div class="placeholder-image"></div>
+              {% endif %}
+            </div>
+            <div class="paper-content">
+              <p class="title"><b>{{ paper.title }}</b></p>
+              <p>{{ paper.authors }}</p>
+              <p><i>{{ paper.venue }}</i></p>
+              <div class="paper-buttons">
+                {% if paper.paper_pdf %}
+                <a class="button" href="{{ paper.paper_pdf }}"
+                  target="_blank"><i
+                    class="fa fa-file" aria-hidden="true"></i> Paper</a>
+                {% endif %}
+                {% if paper.code %}
+                <a class="button" href="{{ paper.code }}" target="_blank"><i
+                    class="fa fa-code" aria-hidden="true"></i> Code</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Tab: 2025 -->
+      <div class="tab-pane" id="papers-2025">
+        {% assign papers2025 = site.data.publications.papers | where: "year",
+        "2025" %}
+        {% for paper in papers2025 %}
+        <div class="paper">
+          <div class="paper-container">
+            <div class="paper-image">
+              {% if paper.image %}
+              <img src="{{ paper.image }}" alt="Paper thumbnail">
+              {% else %}
+              <div class="placeholder-image"></div>
+              {% endif %}
+            </div>
+            <div class="paper-content">
+              <p class="title"><b>{{ paper.title }}</b></p>
+              <p>{{ paper.authors }}</p>
+              <p><i>{{ paper.venue }}</i></p>
+              <div class="paper-buttons">
+                {% if paper.paper_pdf %}
+                <a class="button" href="{{ paper.paper_pdf }}"
+                  target="_blank"><i
+                    class="fa fa-file" aria-hidden="true"></i> Paper</a>
+                {% endif %}
+                {% if paper.code %}
+                <a class="button" href="{{ paper.code }}" target="_blank"><i
+                    class="fa fa-code" aria-hidden="true"></i> Code</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Tab: All Papers -->
+      <div class="tab-pane" id="papers-all">
+        {% assign papersall = site.data.publications.papers %}
+        {% for paper in papersall %}
+        <div class="paper">
+          <div class="paper-container">
+            <div class="paper-image">
+              {% if paper.image %}
+              <img src="{{ paper.image }}" alt="Paper thumbnail">
+              {% else %}
+              <div class="placeholder-image"></div>
+              {% endif %}
+            </div>
+            <div class="paper-content">
+              <p class="title"><b>{{ paper.title }}</b></p>
+              <p>{{ paper.authors }}</p>
+              <p><i>{{ paper.venue }}</i></p>
+              <div class="paper-buttons">
+                {% if paper.paper_pdf %}
+                <a class="button" href="{{ paper.paper_pdf }}"
+                  target="_blank"><i
+                    class="fa fa-file" aria-hidden="true"></i> Paper</a>
+                {% endif %}
+                {% if paper.code %}
+                <a class="button" href="{{ paper.code }}" target="_blank"><i
+                    class="fa fa-code" aria-hidden="true"></i> Code</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PROJECTS ========== -->
+  <div class="docs-section" id="projects">
+    <h4>Projects</h4>
+
+    <div class="tab-content">
+      <!-- Tab: All Projects -->
+      <div class="tab-pane-active" id="papers-all">
+        {% assign projectsall = site.data.projects.projects %}
+        {% for project in projectsall %}
+        <div class="paper">
+          <div class="paper-container">
+            <div class="paper-image">
+              {% if project.image %}
+              <img src="{{ project.image }}" alt="Paper thumbnail">
+              {% else %}
+              <div class="placeholder-image"></div>
+              {% endif %}
+            </div>
+            <div class="paper-content">
+              <p class="title"><b>{{ project.title }}</b></p>
+              <p>{{ project.frameworks }}</p>
+              <p class="subtitle">{{ project.subtitle }}</p>
+              <p><i>{{ project.venue }}</i></p>
+              <div class="paper-buttons">
+                {% if project.paper_pdf %}
+                <a class="button" href="{{ project.paper_pdf }}"
+                  target="_blank"><i class="fa fa-file" aria-hidden="true"></i>
+                  Paper</a>
+                {% endif %}
+                {% if project.code %}
+                <a class="button" href="{{ project.code }}" target="_blank"><i
+                    class="fa fa-code" aria-hidden="true"></i> Code</a>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== RESUME ========== -->
+  <div class="docs-section" id="resume">
+    <h4>Vitæ</h4>
+
+    <div class="paper-buttons">
+      <a class="button" href="{{ site.data.main_info.cv }}"
+        target="_blank">
+        <i class="fa fa-file"
+          aria-hidden="true"></i><span>CV</span>
+      </a>
+    </div>
+
+    <!-- The Timeline -->
+    <ul class="timeline">
+      {% for exp in site.data.experience.experiences %}
+      <li>
+        {% if exp.category == "left" %}
+        <div class="direction-l">
+          {% else %}
+          <div class="direction-r">
+            {% endif %}
+            <div class="flag-wrapper">
+              <span class="flag">{{ exp.place }}</span>
+              <span class="time-wrapper"><span class="time">{{ exp.time
+                  }}</span></span>
+            </div>
+            <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
+              }}</div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>

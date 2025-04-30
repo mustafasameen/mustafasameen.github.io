@@ -1,11 +1,4 @@
 projects:
-  # - title: "SCAC Esports Statistics Tracker"
-  #   subtitle: "Built an OCR-powered system for automated esports data extraction, match outcome prediction (75% accuracy), and real-time analytics for SCAC tournaments."
-  #   thumbnail: "/assets/projects/esports_tracker.png"
-  #   url: "https://github.com/jcandrews2/senior-capstone-project"
-  #   frameworks: ["React", "Flask", "OCR"]
-  #   selected: y
-
   - title: "SCAC Esports Statistics Tracker"
     subtitle: "Built an OCR-powered system for automated esports data extraction, match outcome prediction, and real-time analytics for SCAC tournaments."
     year: 2025
