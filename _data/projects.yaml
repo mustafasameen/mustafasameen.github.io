@@ -1,4 +1,12 @@
 projects:
+  - title: "MochaSimplifier"
+    subtitle: "Web app for accessible text extraction and simplification from images and PDFs, focused on cognitive accessibility. Leverages OCR and LLMs to make text easier to read for everyone."
+    year: 2025
+    frameworks: '<p style="color:#4a6fa5;">TypeScript, React, OCR, OpenAI</p>'
+    selected: n
+    image: "assets/projects/2025-mocha-simplifier/thumbnail.png"
+    code: "https://github.com/mustafasameen/mocha-simplifier"
+    website: "https://mocha-blush.vercel.app"
   - title: "SCAC Esports Statistics Tracker"
     subtitle: "Built an OCR-powered system for automated esports data extraction, match outcome prediction, and real-time analytics for SCAC tournaments."
     year: 2025

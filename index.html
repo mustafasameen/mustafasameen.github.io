@@ -173,10 +173,11 @@ title: Home
               <p class="subtitle">{{ project.subtitle }}</p>
               <p><i>{{ project.venue }}</i></p>
               <div class="paper-buttons">
-                {% if project.paper_pdf %}
-                <a class="button" href="{{ project.paper_pdf }}"
-                  target="_blank"><i class="fa fa-file" aria-hidden="true"></i>
-                  Paper</a>
+                {% if project.website %}
+                <a class="button" href="{{ project.website }}"
+                  target="_blank"><i class="fa fa-external-link"
+                    aria-hidden="true"></i>
+                  Website</a>
                 {% endif %}
                 {% if project.code %}
                 <a class="button" href="{{ project.code }}" target="_blank"><i
@@ -185,42 +186,41 @@ title: Home
               </div>
             </div>
           </div>
+          {% endfor %}
         </div>
-        {% endfor %}
       </div>
     </div>
-  </div>
 
-  <!-- ========== RESUME ========== -->
-  <div class="docs-section" id="resume">
-    <h4>Vitæ</h4>
+    <!-- ========== RESUME ========== -->
+    <div class="docs-section" id="resume">
+      <h4>Vitæ</h4>
 
-    <div class="paper-buttons">
-      <a class="button" href="{{ site.data.main_info.cv }}"
-        target="_blank">
-        <i class="fa fa-file"
-          aria-hidden="true"></i><span>CV</span>
-      </a>
-    </div>
+      <div class="paper-buttons">
+        <a class="button" href="{{ site.data.main_info.cv }}"
+          target="_blank">
+          <i class="fa fa-file"
+            aria-hidden="true"></i><span>CV</span>
+        </a>
+      </div>
 
-    <!-- The Timeline -->
-    <ul class="timeline">
-      {% for exp in site.data.experience.experiences %}
-      <li>
-        {% if exp.category == "left" %}
-        <div class="direction-l">
-          {% else %}
-          <div class="direction-r">
-            {% endif %}
-            <div class="flag-wrapper">
-              <span class="flag">{{ exp.place }}</span>
-              <span class="time-wrapper"><span class="time">{{ exp.time
-                  }}</span></span>
+      <!-- The Timeline -->
+      <ul class="timeline">
+        {% for exp in site.data.experience.experiences %}
+        <li>
+          {% if exp.category == "left" %}
+          <div class="direction-l">
+            {% else %}
+            <div class="direction-r">
+              {% endif %}
+              <div class="flag-wrapper">
+                <span class="flag">{{ exp.place }}</span>
+                <span class="time-wrapper"><span class="time">{{ exp.time
+                    }}</span></span>
+              </div>
+              <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
+                }}</div>
             </div>
-            <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
-              }}</div>
-          </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
