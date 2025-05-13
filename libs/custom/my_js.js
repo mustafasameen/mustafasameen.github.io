@@ -103,5 +103,26 @@ $(document).ready(function () {
     });
   }
 
+  // Modal image popup for project/publication images
+  $(document).on('click', '.paper-image img', function() {
+    var src = $(this).attr('src');
+    var modal = $(
+      '<div class="image-modal-overlay">' +
+        '<div class="image-modal-content">' +
+          '<button class="image-modal-close" aria-label="Close">&times;</button>' +
+          '<img src="' + src + '" alt="Popup image" />' +
+        '</div>' +
+      '</div>'
+    );
+    $('body').append(modal);
+  });
+
+  // Close modal on overlay or close button click
+  $(document).on('click', '.image-modal-overlay, .image-modal-close', function(e) {
+    if ($(e.target).is('.image-modal-overlay') || $(e.target).is('.image-modal-close')) {
+      $('.image-modal-overlay').remove();
+    }
+  });
+
   init();
 });

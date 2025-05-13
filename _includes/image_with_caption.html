@@ -1,4 +1,6 @@
 <figure class="image">
-  <img src="{{ include.url | prepend: site.baseurl }}" alt="{{ include.description }}" style="width: {{ include.width }}"/>
+  <img src="{{ include.url | prepend: site.baseurl }}"
+    alt="{{ include.description }}"
+    {% if include.width %}style="width: {{ include.width }}" {% endif %} />
   <figcaption><b>{{ include.description }}</b></figcaption>
 </figure>

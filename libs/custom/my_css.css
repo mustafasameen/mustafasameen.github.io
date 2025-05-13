@@ -381,3 +381,47 @@ a:hover, a:focus {
   border: 1.5px solid #eee;
   background: #fff;
 }
+
+/* Modal overlay for image popups */
+.image-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+}
+.image-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.image-modal-content img {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  background: #fff;
+}
+.image-modal-close {
+  position: absolute;
+  top: -32px;
+  right: 0;
+  font-size: 2.2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+  padding: 0 12px;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.image-modal-close:hover {
+  color: #bbb;
+}
