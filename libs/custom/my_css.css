@@ -374,3 +374,10 @@ a:hover, a:focus {
   --accent: #bbb;
   --background: #fafafa;
 }
+
+.u-max-full-width {
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  border: 1.5px solid #eee;
+  background: #fff;
+}
