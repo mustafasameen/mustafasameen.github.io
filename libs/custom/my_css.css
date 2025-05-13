@@ -208,10 +208,14 @@ h4 {
   }
   .navbar > .container {
     width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   .navbar-list {
     list-style: none;
     margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .navbar-item {
     position: relative;
