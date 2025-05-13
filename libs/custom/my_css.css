@@ -1,3 +1,9 @@
+body {
+  font-family: 'Inter', 'Raleway', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+}
+
 h4 {
   letter-spacing: 0.1rem;
 }
@@ -10,10 +16,21 @@ h4 {
   text-align: left;
 }
 .main-description h1 {
+  font-family: 'Inter', 'Raleway', sans-serif;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   margin-bottom: 0px;
 }
-.main-description p {
-  margin-bottom: 0px;
+.main-description p:first-of-type {
+  font-size: 1.1em;
+  color: #888;
+  font-weight: 400;
+  margin-bottom: 0.25em;
+}
+.main-description p:nth-of-type(2) {
+  color: #555;
+  font-size: 1.05em;
 }
 .main-description .fa {
   font-size: 22px;
@@ -52,18 +69,28 @@ h4 {
   display: inline-flex;        /* lets icon + text share one line    */
   align-items: center;         /* vertically center them             */
   padding: 10px 15px;
-  border: 1px solid #ccc;
+  border: 1.5px solid #d1d5db;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   gap: 6px;                    /* space between icon & text          */
   white-space: nowrap;
+  background: #fafbfc;
+  color: #222;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+.paper-buttons a.button:hover {
+  background: #f3f4f6;
+  color: #000;
+  border: 1.5px solid #bdbdbd;
 }
 
 /* icon tweaks */
 .paper-buttons .button i{
   font-size:1.2em;
   line-height:0;         /* prevent icon from pushing down */
+  color: #888;
 }
 
 
@@ -106,6 +133,8 @@ h4 {
   font-size: 1.5rem;
   letter-spacing: 0.2rem;
   font-weight: 600;
+  color: #111;
+  border-bottom: 2px solid #bbb;
 }
 .docs-section {
   border-top: 1px solid #eee;
@@ -197,10 +226,14 @@ h4 {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222;
+    color: #444;
+    background: none;
   }
   .navbar-link.active {
-    color: #33c3f0;
+    color: #111;
+    font-weight: 700;
+    border-bottom: 2px solid #bbb;
+    background: none;
   }
   .has-docked-nav .navbar {
     position: fixed;
@@ -267,7 +300,7 @@ h4 {
   }
   .popover-link {
     position: relative;
-    color: #222;
+    color: #444;
     display: block;
     padding: 8px 20px;
     border-bottom: 1px solid #eee;
@@ -277,6 +310,7 @@ h4 {
     font-weight: 600;
     text-align: center;
     letter-spacing: 0.1rem;
+    background: none;
   }
   .popover-item:first-child .popover-link {
     border-radius: 4px 4px 0 0;
@@ -287,10 +321,52 @@ h4 {
   }
   .popover-link:hover {
     color: #fff;
-    background: #33c3f0;
+    background: #222;
+    border-bottom-color: #222;
   }
   .popover-link:hover,
   .popover-item:first-child .popover-link:hover:after {
-    border-bottom-color: #33c3f0;
+    border-bottom-color: #222;
   }
+}
+
+/* Remove blue from links site-wide */
+a, a:visited {
+  color: #444;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover, a:focus {
+  color: #000;
+}
+
+/* Remove blue from section headers and tabs */
+.section-header, .navbar-link.active, .popover-link.active {
+  color: #111 !important;
+  border-bottom: 2px solid #bbb;
+}
+
+/* Remove blue from timeline and other accents */
+.timeline-dot, .timeline-line {
+  background: #bbb !important;
+  border-color: #bbb !important;
+}
+
+/* Remove blue from tab controls */
+.tabs .tab.active {
+  color: #111;
+  border-bottom: 2px solid #bbb;
+  background: none;
+}
+.tabs .tab {
+  color: #888;
+  background: none;
+}
+
+/* General: remove blue from all elements, use only greys */
+* {
+  --primary: #111;
+  --secondary: #888;
+  --accent: #bbb;
+  --background: #fafafa;
 }

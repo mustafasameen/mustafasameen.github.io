@@ -17,50 +17,13 @@
   width: 6px;
   height: 100%;
   margin-left: -3px;
-  background: #4a6fa5;
-  background: -moz-linear-gradient(
-    top,
-    rgba(74, 111, 165, 0) 0%,
-    rgba(74, 111, 165, 1) 8%,
-    rgba(74, 111, 165, 1) 92%,
-    rgba(74, 111, 165, 0) 100%
-  );
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(0%, rgba(74, 111, 165, 0)),
-    color-stop(100%, rgba(74, 111, 165, 1))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(74, 111, 165, 0) 0%,
-    rgba(74, 111, 165, 1) 8%,
-    rgba(74, 111, 165, 1) 92%,
-    rgba(74, 111, 165, 0) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(74, 111, 165, 0) 0%,
-    rgba(74, 111, 165, 1) 8%,
-    rgba(74, 111, 165, 1) 92%,
-    rgba(74, 111, 165, 0) 100%
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(74, 111, 165, 0) 0%,
-    rgba(74, 111, 165, 1) 8%,
-    rgba(74, 111, 165, 1) 92%,
-    rgba(74, 111, 165, 0) 100%
-  );
   background: linear-gradient(
     to bottom,
-    rgba(74, 111, 165, 0) 0%,
-    rgba(74, 111, 165, 1) 8%,
-    rgba(74, 111, 165, 1) 92%,
-    rgba(74, 111, 165, 0) 100%
+    #222 0%,    /* dark grey */
+    #888 30%,   /* medium grey */
+    #bbb 70%,   /* light grey */
+    #fafafa 100% /* off-white */
   );
-
   z-index: 5;
 }
 
@@ -99,7 +62,7 @@
 .flag {
   position: relative;
   display: inline;
-  background: rgb(248, 248, 248);
+  background: #fafafa;
   padding: 6px 10px;
   border-radius: 5px;
 
@@ -133,7 +96,7 @@
   margin-top: -10px;
   background: #fff;
   border-radius: 10px;
-  border: 4px solid #1e5799; /* Cobalt blue for timeline dots */
+  border: 4px solid #bbb; /* Neutral grey for timeline dots */
   z-index: 10;
 }
 
@@ -150,7 +113,7 @@
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-left-color: rgb(248, 248, 248);
+  border-left-color: #fafafa;
   border-width: 8px;
   pointer-events: none;
 }
@@ -164,7 +127,7 @@
   width: 0;
   margin-top: -8px;
   border: solid transparent;
-  border-right-color: rgb(248, 248, 248);
+  border-right-color: #fafafa;
   border-width: 8px;
   pointer-events: none;
 }
@@ -174,7 +137,7 @@
 
   line-height: 1em;
   font-size: 0.66666em;
-  color: #4a8ec6; /* Light blue for time text */
+  color: #888; /* Neutral grey for time text */
   vertical-align: middle;
 }
 
@@ -189,7 +152,7 @@
 .time {
   display: inline-block;
   padding: 4px 6px;
-  background: rgb(248, 248, 248);
+  background: #fafafa;
 }
 
 .desc {
@@ -266,7 +229,7 @@
   }
 
   .flag {
-    background: rgb(255, 255, 255);
+    background: #fff;
     z-index: 15;
   }
 
@@ -282,7 +245,7 @@
     margin-left: -9px;
     background: #fff;
     border-radius: 10px;
-    border: 4px solid #1e5799; /* Cobalt blue for timeline dots */
+    border: 4px solid #bbb; /* Neutral grey for timeline dots */
     z-index: 10;
   }
 
@@ -296,7 +259,7 @@
     width: 0;
     margin-left: -8px;
     border: solid transparent;
-    border-bottom-color: rgb(255, 255, 255);
+    border-bottom-color: #fff;
     border-width: 8px;
     pointer-events: none;
   }

@@ -1,7 +1,7 @@
 papers:
   - title: "FORMAL: Democratizing Lean 4 Formalization Through Retrieval-Augmented Thinking and Agentic Feedback Loops"
     year: preprint
-    authors: '<p style="color:#4a6fa5;">Mustafa Sameen</p>'
+    authors: '<p style="color:#888;">Mustafa Sameen</p>'
     selected: n
     image: "assets/publications/2025-formal/thumbnail.png"
     paper_pdf: "assets/publications/2025-formal/paper.pdf"
