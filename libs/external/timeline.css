@@ -84,11 +84,11 @@
 }
 
 .direction-l .experience-image {
-  left: -22px;
+  left: -12px;
 }
 
 .direction-r .experience-image {
-  right: -22px;
+  right: -12px;
 }
 
 .flag {
@@ -258,11 +258,7 @@
     padding: 0;
   }
   .experience-image {
-    position: static;
-    display: block;
-    margin: 0 auto 10px auto;
-    width: 48px;
-    height: 48px;
+    display: none; /* Hide images on mobile */
   }
 
   .flag-wrapper {

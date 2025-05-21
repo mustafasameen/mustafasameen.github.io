@@ -1,38 +1,9 @@
 bio: |
   <p>
-    I am an incoming PhD student at the <a href="https://www.ufl.edu">University
-      of Florida</a>, working with <a
-      href="https://www.essie.ufl.edu/people/name/xilei-zhao/">Dr. Xilei
-      Zhao</a> in the <a href="https://faculty.eng.ufl.edu/sermos-lab/">SERMoS
-      Lab</a> at the intersection of <b>Artificial Intelligence</b> and
-    <b>Transportation Engineering</b>. My current research focuses on developing
-    interpretable machine learning models with fairness constraints for
-    transportation systems, including a unified framework for addressing
-    fairness across the entire travel modeling pipeline (trip generation,
-    destination distribution, mode choice, and traffic assignment). I am also
-    exploring bi-directional fairness frameworks to prevent biases from
-    propagating between modeling stages.
+  I am an incoming Ph.D. student in the SERMoS Lab at the <a href="https://www.ufl.edu">University of Florida</a>, advised by <a href="https://faculty.eng.ufl.edu/xilei-zhao/">Dr. Xilei Zhao</a>, joining the <a href="https://faculty.eng.ufl.edu/sermos-lab/"><u>SERMoS Lab</u></a> this Fall. I graduate this May from <a href="https://www.coloradocollege.edu">Colorado College</a> with a double major in Computer Science and Mathematics.
+  My research sits at the intersection of AI and transportation engineering. I’m currently focused on:
+  (A) Spatio-temporal demand forecasting using LLM-based agents
+  (B) Multi-agent LLM systems for adaptive, real-time digital twins
+  (C) Fairness-aware, interpretable models across multi-stage travel-model pipelines
   </p>
-  <p>
-    I will graduating from <a href="https://www.coloradocollege.edu">Colorado
-      College</a> this May with a double major in <b>Computer Science</b> and
-    <b>Mathematics</b>, where I developed <b>FORMAL</b>—an AI system that
-    integrates Retrieval-Augmented Thinking and agentic feedback loops for
-    translating informal mathematics into Lean 4 code with 92% syntactic
-    correctness.
-  </p>
-  <p>
-    My research interests include <b>LLM Agents</b>, <b>Trustworthy AI</b>, and
-    <b>AI for Transportation</b>. I'm particularly excited about:
-  </p>
-  <ul>
-    <li>Designing interpretable and fair AI models for transportation demand
-      forecasting that balance predictive accuracy with equity
-      considerations</li>
-    <li>Developing integrated approaches to ensure fairness across multi-stage
-      travel modeling pipelines</li>
-    <li>Creating real-time digital twins powered by LLM-based agents for
-      adaptive transportation systems monitoring and management</li>
-    <li>Building robust validation frameworks for agent-based transportation
-      models with resource-efficient architectures</li>
-  </ul>
+

@@ -1,5 +1,5 @@
 experiences:
-  - place: "Urban Mobility Lab at MIT"
+  - place: "JTL Urban Mobility Lab at MIT"
     time: "Summer 2025"
     title: "Summer Research Intern"
     subtitle: "Advisor: <a href='https://mobility.mit.edu/people/muhammad-usama' style='text-decoration: none; color: #555;'>Dr Muhammad Usama</a>"
@@ -8,7 +8,7 @@ experiences:
   - place: "Colorado College"
     time: "Aug. 2021 - May 2025"
     title: "B.A. in Computer Science & Mathematics"
-    subtitle: "GPA: 4.0/4.0, Phi Beta Kappa"
+    subtitle: "GPA: 4.0/4.0, Phi Beta Kappa, Magna Cum Laude"
     category: "left"
     image: "assets/experiences/colorado-college.svg"
   - place: "State of the Rockies"
