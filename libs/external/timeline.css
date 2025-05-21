@@ -49,14 +49,14 @@
   float: left;
   text-align: right;
   padding-left: 0;
-  padding-right: 140px; /* space for image */
+  padding-right: 70px;
 }
 
 .direction-r {
   float: right;
   text-align: left;
   padding-right: 0;
-  padding-left: 140px; /* space for image */
+  padding-left: 70px;
 }
 
 .flag-wrapper {
@@ -69,12 +69,10 @@
 .experience-image {
   position: absolute;
   top: 0;
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 64px;
+  height: 64px;
   object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   margin: 0;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   z-index: 2;
@@ -86,11 +84,11 @@
 }
 
 .direction-l .experience-image {
-  left: -140px;
+  left: -22px;
 }
 
 .direction-r .experience-image {
-  right: -140px;
+  right: -22px;
 }
 
 .flag {
@@ -212,16 +210,16 @@
     width: 290px;
   }
   .direction-l {
-    padding-right: 120px;
+    padding-right: 50px;
   }
   .direction-r {
-    padding-left: 120px;
+    padding-left: 50px;
   }
   .direction-l .experience-image, .direction-r .experience-image {
-    width: 100px;
-    height: 100px;
-    left: -120px;
-    right: -120px;
+    width: 48px;
+    height: 48px;
+    left: -52px;
+    right: -52px;
   }
 }
 
@@ -263,6 +261,8 @@
     position: static;
     display: block;
     margin: 0 auto 10px auto;
+    width: 48px;
+    height: 48px;
   }
 
   .flag-wrapper {
