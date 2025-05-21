@@ -209,18 +209,36 @@ title: Home
         <li>
           {% if exp.category == "left" %}
           <div class="direction-l">
-            {% else %}
-            <div class="direction-r">
-              {% endif %}
-              <div class="flag-wrapper">
-                <span class="flag">{{ exp.place }}</span>
-                <span class="time-wrapper"><span class="time">{{ exp.time
-                    }}</span></span>
-              </div>
-              <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
-                }}</div>
+            {% if exp.image %}
+            <img src="{{ site.baseurl }}{{ exp.image }}" alt="{{ exp.place }}"
+              class="experience-image">
+            {% endif %}
+            <div class="flag-wrapper">
+              <span class="flag">{{ exp.place }}</span>
+              <span class="time-wrapper"><span class="time">{{ exp.time
+                  }}</span></span>
             </div>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
+            <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
+              }}</div>
+          </div>
+          {% else %}
+          <div class="direction-r">
+            <div class="flag-wrapper">
+              <span class="flag">{{ exp.place }}</span>
+              <span class="time-wrapper"><span class="time">{{ exp.time
+                  }}</span></span>
+            </div>
+            <div class="desc"><b>{{ exp.title }}</b> <br /> {{ exp.subtitle
+              }}</div>
+            {% if exp.image %}
+            <img src="{{ site.baseurl }}{{ exp.image }}" alt="{{ exp.place }}"
+              class="experience-image">
+            {% endif %}
+          </div>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

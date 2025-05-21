@@ -39,24 +39,58 @@
   visibility: hidden;
 }
 
-.direction-l {
+.direction-l, .direction-r {
   position: relative;
+  display: block;
   width: 370px;
+}
+
+.direction-l {
   float: left;
   text-align: right;
+  padding-left: 0;
+  padding-right: 140px; /* space for image */
 }
 
 .direction-r {
-  position: relative;
-  width: 370px;
   float: right;
+  text-align: left;
+  padding-right: 0;
+  padding-left: 140px; /* space for image */
 }
 
 .flag-wrapper {
   position: relative;
   display: inline-block;
-
   text-align: center;
+}
+
+/* Experience image styling */
+.experience-image {
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2;
+}
+
+.experience-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.direction-l .experience-image {
+  left: -140px;
+}
+
+.direction-r .experience-image {
+  right: -140px;
 }
 
 .flag {
@@ -65,9 +99,9 @@
   background: #fafafa;
   padding: 6px 10px;
   border-radius: 5px;
-
   font-weight: 600;
   text-align: left;
+  clear: both;
 }
 
 .direction-l .flag {
@@ -96,7 +130,7 @@
   margin-top: -10px;
   background: #fff;
   border-radius: 10px;
-  border: 4px solid #bbb; /* Neutral grey for timeline dots */
+  border: 4px solid #bbb;
   z-index: 10;
 }
 
@@ -160,6 +194,7 @@
   font-size: 0.77777em;
   /* font-style: italic; */
   line-height: 1.5em;
+  flex-shrink: 1;
 }
 
 .direction-r .desc {
@@ -173,17 +208,20 @@
     width: 640px;
   }
 
-  .direction-l {
-    position: relative;
+  .direction-l, .direction-r {
     width: 290px;
-    float: left;
-    text-align: right;
   }
-
+  .direction-l {
+    padding-right: 120px;
+  }
   .direction-r {
-    position: relative;
-    width: 290px;
-    float: right;
+    padding-left: 120px;
+  }
+  .direction-l .experience-image, .direction-r .experience-image {
+    width: 100px;
+    height: 100px;
+    left: -120px;
+    right: -120px;
   }
 }
 
@@ -216,12 +254,15 @@
     padding: 2em 0;
   }
 
-  .direction-l,
-  .direction-r {
+  .direction-l, .direction-r {
     float: none;
     width: 100%;
-
-    text-align: center;
+    padding: 0;
+  }
+  .experience-image {
+    position: static;
+    display: block;
+    margin: 0 auto 10px auto;
   }
 
   .flag-wrapper {
