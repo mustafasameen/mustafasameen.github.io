@@ -6,11 +6,10 @@ export const runtime = "edge";
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const title = searchParams.get("title");
-
-    if (!title) {
-      return new Response("Missing title parameter", { status: 400 });
-    }
+    const title = searchParams.get("title") || "Mustafa Sameen";
+    const subtitle = searchParams.get("title")
+      ? "mustafasameen.com"
+      : "PhD Student · University of Florida";
 
     return new ImageResponse(
       (
@@ -22,41 +21,21 @@ export async function GET(req: NextRequest) {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: "#0a0a0a",
+            backgroundColor: "#09090b",
             position: "relative",
           }}
         >
           <div
             style={{
               position: "absolute",
-              top: "32px",
-              right: "32px",
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
+              top: "40px",
+              right: "48px",
+              color: "#a1a1aa",
+              fontSize: "20px",
+              fontWeight: 500,
             }}
           >
-            <img
-              src={new URL(
-                "/logo.svg",
-                process.env.NEXT_PUBLIC_APP_URL
-              ).toString()}
-              width={24}
-              height={24}
-              alt="Logo"
-              style={{
-                objectFit: "contain",
-              }}
-            />
-            <span
-              style={{
-                color: "white",
-                fontSize: "20px",
-                fontWeight: 500,
-              }}
-            >
-              mustafasameen.com
-            </span>
+            mustafasameen.com
           </div>
 
           <div
@@ -66,21 +45,39 @@ export async function GET(req: NextRequest) {
               alignItems: "center",
               justifyContent: "center",
               padding: "0 48px",
-              maxWidth: "900px",
+              maxWidth: "1000px",
             }}
           >
             <h1
               style={{
-                fontSize: "48px",
+                fontSize: "64px",
                 fontWeight: 700,
-                color: "#a7f3d0",
-                lineHeight: 1.2,
+                color: "#fafafa",
+                lineHeight: 1.15,
                 textAlign: "center",
                 margin: 0,
               }}
             >
               {title}
             </h1>
+            <div
+              style={{
+                marginTop: "28px",
+                height: "6px",
+                width: "88px",
+                borderRadius: "3px",
+                backgroundColor: "#10b981",
+              }}
+            />
+            <p
+              style={{
+                marginTop: "28px",
+                fontSize: "26px",
+                color: "#a1a1aa",
+              }}
+            >
+              {subtitle}
+            </p>
           </div>
         </div>
       ),

@@ -1,14 +1,3 @@
-export interface Blog {
-  slug: string;
-  metadata: {
-    title: string;
-    publishedAt: string;
-    summary: string;
-  };
-  content: string;
-  readingTime: number;
-}
-
 export interface Publication {
   slug: string;
   metadata: {
@@ -20,6 +9,7 @@ export interface Publication {
     coFirstAuthors?: string;
     year?: string;
     image?: string;
+    featured?: string;
   };
   content: string;
 }

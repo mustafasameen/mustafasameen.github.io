@@ -1,6 +1,7 @@
 import IconGithub from "./shared/icons/github";
 import IconLinkedin from "./shared/icons/linkedin";
 import IconMail from "./shared/icons/mail";
+import IconScholar from "./shared/icons/scholar";
 
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -24,6 +25,10 @@ export default function Social() {
       <SocialLink href="https://github.com/mustafasameen">
         <IconGithub />
         GitHub
+      </SocialLink>
+      <SocialLink href="https://scholar.google.com/citations?user=a8DWRtUAAAAJ&hl=en">
+        <IconScholar />
+        Scholar
       </SocialLink>
       <SocialLink href="https://www.linkedin.com/in/mustafasameen/">
         <IconLinkedin />

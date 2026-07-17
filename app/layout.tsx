@@ -4,10 +4,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import Footer from "@/components/footer";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "./theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
+
+const description =
+  "PhD student at the University of Florida building agentic AI systems and multi-agent simulations for transportation.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -17,19 +21,17 @@ export const metadata: Metadata = {
     default: "Mustafa Sameen - PhD Student",
     template: "%s | Mustafa Sameen",
   },
-  description:
-    "Mustafa Sameen - PhD Student at University of Florida",
+  description,
   openGraph: {
     title: "Mustafa Sameen - PhD Student",
-    description:
-      "PhD Student at University of Florida",
+    description,
     url: "https://mustafasameen.com",
     siteName: "Mustafa Sameen",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "https://mustafasameen.com/logo.svg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "Mustafa Sameen",
@@ -49,13 +51,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "Mustafa Sameen",
+    description,
     card: "summary_large_image",
     site: "@mustafasameen",
     creator: "@mustafasameen",
   },
   verification: {
     google: "K1pkJ72cY3DylswXke2MHJGxmjJ91WXwgozcCICvFrU",
-    // TODO: Add yandex verification key here
   },
 };
 
@@ -71,15 +73,15 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="theme"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className=" antialiased lg:max-w-2xl md:max-w-full mx-4 mb-40 flex flex-col md:flex-row  mt-2 sm:mt-8 lg:mx-auto">
+          <main className="antialiased lg:max-w-2xl md:max-w-full mx-4 mb-12 flex flex-col md:flex-row mt-2 sm:mt-8 lg:mx-auto">
             <section className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
               <Header />
-
               {children}
+              <Footer />
             </section>
           </main>
         </ThemeProvider>
