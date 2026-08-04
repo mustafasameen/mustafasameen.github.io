@@ -6,6 +6,12 @@
       "runtimeExecutable": "pnpm",
       "runtimeArgs": ["dev"],
       "port": 3000
+    },
+    {
+      "name": "static-preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "serve@14", "out", "-l", "3001"],
+      "port": 3001
     }
   ]
 }

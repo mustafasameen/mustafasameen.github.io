@@ -1,11 +1,10 @@
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
 import Footer from "@/components/footer";
 import { Header } from "@/components/header";
+import { SITE_URL } from "./site";
 import { ThemeProvider } from "./theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -14,9 +13,7 @@ const description =
   "PhD student at the University of Florida building agentic AI systems and multi-agent simulations for transportation.";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "https://mustafasameen.com"
-  ),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Mustafa Sameen - PhD Student",
     template: "%s | Mustafa Sameen",
@@ -25,16 +22,16 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mustafa Sameen - PhD Student",
     description,
-    url: "https://mustafasameen.com",
+    url: SITE_URL,
     siteName: "Mustafa Sameen",
     locale: "en_US",
     type: "website",
     images: [
       {
-        url: "/opengraph-image",
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Mustafa Sameen",
+        alt: "Mustafa Sameen — PhD Student, University of Florida",
       },
     ],
   },
@@ -55,6 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@mustafasameen",
     creator: "@mustafasameen",
+    images: ["/og.png"],
   },
   verification: {
     google: "K1pkJ72cY3DylswXke2MHJGxmjJ91WXwgozcCICvFrU",
@@ -85,8 +83,6 @@ export default function RootLayout({
             </section>
           </main>
         </ThemeProvider>
-        <Analytics />
-        <SpeedInsights />
       </body>
     </html>
   );

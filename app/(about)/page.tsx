@@ -6,6 +6,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { newsItems } from "../db/news";
 import { getPublications } from "../db/publications";
+import { SITE_URL } from "../site";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -16,7 +17,7 @@ const structuredData = {
     "@type": "Organization",
     name: "University of Florida",
   },
-  url: "https://mustafasameen.com",
+  url: SITE_URL,
   sameAs: [
     "https://github.com/mustafasameen",
     "https://www.linkedin.com/in/mustafasameen/",

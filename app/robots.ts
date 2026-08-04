@@ -1,3 +1,7 @@
+import { SITE_URL } from "./site";
+
+export const dynamic = "force-static";
+
 export default function robots() {
   return {
     rules: [
@@ -5,7 +9,7 @@ export default function robots() {
         userAgent: "*",
       },
     ],
-    sitemap: "https://mustafasameen.com/sitemap.xml",
-    host: "https://mustafasameen.com",
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }
