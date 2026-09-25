@@ -25,6 +25,15 @@ const structuredData = {
   ],
 };
 
+const KEYWORDS = [
+  "LLM agents",
+  "Multi-agent simulation",
+  "Behavioral modeling",
+  "LLM evaluation",
+  "GeoAI",
+  "Disaster resilience",
+];
+
 function SectionHeading({
   label,
   href,
@@ -76,14 +85,33 @@ export default function About() {
           with a double major in Computer Science and Mathematics.
         </p>
         <p>
-          My research uses{" "}
-          <span className="font-medium">GPS and mobility data</span> with
-          machine learning, including{" "}
-          <span className="font-medium">large language models</span>, to study
-          how people move before, during, and after disasters such as
-          hurricanes, wildfires, and earthquakes.
+          I build{" "}
+          <span className="font-medium">
+            AI systems that model human behavior
+          </span>{" "}
+          &mdash; LLM agents and multi-agent simulations grounded in behavioral
+          theory, and the benchmarks that test whether they get it right. Much
+          of my work is in{" "}
+          <span className="font-medium">human mobility</span>, from everyday
+          travel decisions to how people move before, during, and after
+          disasters.
         </p>
       </div>
+      <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs tracking-wide text-neutral-500 dark:text-neutral-400">
+        {KEYWORDS.map((keyword, index) => (
+          <span key={keyword} className="whitespace-nowrap">
+            {keyword}
+            {index < KEYWORDS.length - 1 && (
+              <span
+                aria-hidden
+                className="ml-2 text-neutral-300 dark:text-neutral-600"
+              >
+                &middot;
+              </span>
+            )}
+          </span>
+        ))}
+      </p>
       <div className="mt-8">
         <Social />
       </div>
