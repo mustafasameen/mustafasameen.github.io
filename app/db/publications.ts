@@ -43,5 +43,16 @@ function getMDXData(dir: string): Publication[] {
 }
 
 export function getPublications(): Publication[] {
-  return getMDXData(path.join(process.cwd(), "content/publications"));
+  // Newest year first, then by the explicit `order` field within a year.
+  // Entries without `order` fall to the end of their year.
+  return getMDXData(path.join(process.cwd(), "content/publications")).sort(
+    (a, b) => {
+      const yearDiff =
+        Number(b.metadata.year || 0) - Number(a.metadata.year || 0);
+      if (yearDiff !== 0) return yearDiff;
+      const rank = (pub: Publication) =>
+        pub.metadata.order ? Number(pub.metadata.order) : Number.MAX_SAFE_INTEGER;
+      return rank(a) - rank(b);
+    }
+  );
 } 

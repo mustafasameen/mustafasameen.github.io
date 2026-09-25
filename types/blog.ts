@@ -8,6 +8,7 @@ export interface Publication {
     codeUrl?: string;
     coFirstAuthors?: string;
     year?: string;
+    order?: string; // rank within a year; lower shows first
     image?: string;
     featured?: string;
   };

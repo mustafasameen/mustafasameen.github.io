@@ -59,7 +59,7 @@ export default function About() {
     <Container size="large" className="container animate-enter">
       <div className="prose prose-zinc dark:prose-invert mt-5 text-zinc-800 dark:text-zinc-200">
         <p>
-          I am a Ph.D. student at the{" "}
+          I am a second-year Ph.D. student at the{" "}
           <TextLink href="https://www.ufl.edu">University of Florida</TextLink>
           , advised by{" "}
           <TextLink href="https://essie.ufl.edu/people/name/xilei-zhao/">
@@ -76,11 +76,12 @@ export default function About() {
           with a double major in Computer Science and Mathematics.
         </p>
         <p>
-          My research sits at the intersection of AI and transportation. I
-          build <span className="font-medium">agentic AI systems</span> and{" "}
-          <span className="font-medium">multi-agent simulations</span> that
-          reason over mobility data, encode behavioral theory, and model human
-          decision-making at scale.
+          My research uses{" "}
+          <span className="font-medium">GPS and mobility data</span> with
+          machine learning, including{" "}
+          <span className="font-medium">large language models</span>, to study
+          how people move before, during, and after disasters such as
+          hurricanes, wildfires, and earthquakes.
         </p>
       </div>
       <div className="mt-8">

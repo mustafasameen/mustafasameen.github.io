@@ -11,6 +11,27 @@ export type NewsItem = {
 export const newsItems: NewsItem[] = [
   {
     year: "2026",
+    month: "Sep",
+    content: (
+      <>
+        Three papers accepted at ACM SIGSPATIAL 2026:{" "}
+        <TextLink href="https://takayabe0505.github.io/humob-2026/">
+          HuMob
+        </TextLink>
+        ,{" "}
+        <TextLink href="https://rsvp.withgoogle.com/events/sigspatial-2026-umfm-workshop">
+          UMFM
+        </TextLink>{" "}
+        and{" "}
+        <TextLink href="https://events.ornl.gov/acmsigspatial-geoai2026/">
+          GeoAI
+        </TextLink>
+        . See you in Riverside, CA, in November!
+      </>
+    ),
+  },
+  {
+    year: "2026",
     month: "Jan",
     content: (
       <>
