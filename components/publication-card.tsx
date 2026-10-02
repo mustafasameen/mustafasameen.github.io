@@ -56,6 +56,7 @@ export function PublicationCard({
 }) {
   const pdfUrl = pub.metadata.pdfUrl?.trim();
   const codeUrl = pub.metadata.codeUrl?.trim();
+  const projectUrl = pub.metadata.projectUrl?.trim();
   const year = pub.metadata.year?.trim();
 
   if (compact) {
@@ -96,6 +97,7 @@ export function PublicationCard({
           )}
           {pdfUrl && <Badge label="PDF" href={pdfUrl} />}
           {codeUrl && <Badge label="Code" href={codeUrl} />}
+          {projectUrl && <Badge label="Website" href={projectUrl} />}
         </h3>
         <p className="mt-1.5 text-[0.95rem] text-neutral-600 dark:text-neutral-400">
           {renderAuthors(pub.metadata.authors, pub.metadata.coFirstAuthors || "")}

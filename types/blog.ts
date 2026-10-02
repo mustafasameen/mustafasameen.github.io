@@ -6,6 +6,7 @@ export interface Publication {
     venue: string; // Preprint or conference name
     pdfUrl?: string;
     codeUrl?: string;
+    projectUrl?: string;
     coFirstAuthors?: string;
     year?: string;
     order?: string; // rank within a year; lower shows first
