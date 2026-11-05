@@ -75,8 +75,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="antialiased lg:max-w-2xl md:max-w-full mx-4 mb-12 flex flex-col md:flex-row mt-2 sm:mt-8 lg:mx-auto">
-            <section className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+          <main className="antialiased lg:max-w-2xl md:max-w-full mx-1 sm:mx-4 mb-12 flex flex-col md:flex-row mt-2 sm:mt-8 lg:mx-auto">
+            <section className="flex-auto min-w-0 mt-6 flex flex-col">
               <Header />
               {children}
               <Footer />

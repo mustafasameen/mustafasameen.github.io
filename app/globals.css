@@ -98,9 +98,51 @@ button:focus-visible {
 }
 
 .prose h2,
-h3,
-h4 {
+.prose h3,
+.prose h4 {
   @apply font-medium tracking-tighter !important;
+}
+
+/* Soft-edged window for the home-page simulation */
+.hero-sim {
+  -webkit-mask-image: radial-gradient(
+    ellipse closest-side at 50% 50%,
+    #000 58%,
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    ellipse closest-side at 50% 50%,
+    #000 58%,
+    transparent 100%
+  );
+}
+
+/* Inline list with dot separators that never dangle at a line edge:
+   each item carries its separator in front, and the one that starts
+   a line is clipped by the container. */
+.dot-list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.25rem;
+  overflow: hidden;
+}
+
+.dot-list > li {
+  margin-left: -1.25rem;
+  white-space: nowrap;
+}
+
+.dot-list > li::before {
+  content: "\00B7";
+  content: "\00B7" / "";
+  display: inline-block;
+  width: 1.25rem;
+  text-align: center;
+  color: rgb(212 212 216);
+}
+
+.dark .dot-list > li::before {
+  color: rgb(82 82 91);
 }
 
 .prose strong {
@@ -158,4 +200,10 @@ h4 {
 
 .container > *:nth-child(n + 6) {
   animation-delay: 350ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container > * {
+    animation: none;
+  }
 }

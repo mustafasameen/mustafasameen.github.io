@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import HeroSim from "./hero-sim";
 import Container from "./shared/container";
 import { ModeToggle } from "./ui/theme-toggle";
 
@@ -16,6 +17,7 @@ const NAV_ITEMS = {
 
 export const Header = () => {
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   return (
     <header>
@@ -24,10 +26,10 @@ export const Header = () => {
           className="flex flex-col fade items-center md:items-start justify-start py-8 tracking-tight w-full sm:pr-0 md:pr-6 lg:pr-0"
           aria-label="Main navigation"
         >
-          <div className="flex flex-row items-center">
-            <Link href="/">
+          <div className="relative flex w-full flex-row items-center justify-center md:justify-start">
+            <Link href="/" className="relative z-10 shrink-0 rounded-full">
               <Image
-                src="/profile.JPG"
+                src="/profile.webp"
                 alt="Mustafa Sameen"
                 width={100}
                 height={100}
@@ -38,8 +40,8 @@ export const Header = () => {
               <span className="sr-only">Mustafa Sameen</span>
             </Link>
 
-            <div className="ml-4 flex flex-col">
-              <span className="text-lg font-semibold tracking-tight">
+            <div className="relative z-10 ml-4 flex flex-col">
+              <span className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-50">
                 Mustafa Sameen
               </span>
               <span className="text-sm text-neutral-500 dark:text-neutral-400">
@@ -49,9 +51,13 @@ export const Header = () => {
                 University of Florida
               </span>
             </div>
+
+            {isHome && (
+              <HeroSim className="absolute -top-10 -bottom-2 left-[46%] right-0 hidden md:block" />
+            )}
           </div>
 
-          <div className="flex flex-row flex-wrap items-center justify-center sm:justify-end gap-y-1 w-full mt-8 sm:mt-4 mb-0 sm:mb-4 tracking-tight">
+          <div className="flex flex-row flex-wrap items-center justify-center sm:justify-end gap-y-1 w-full mt-6 sm:mt-4 mb-0 sm:mb-4 text-[0.95rem] sm:text-base tracking-tight">
             <div className="flex flex-wrap items-center justify-center">
               {Object.entries(NAV_ITEMS).map(([name, href]) => (
                 <Link
@@ -62,7 +68,7 @@ export const Header = () => {
                     pathname === href
                       ? "font-semibold text-emerald-900 dark:text-emerald-200"
                       : "font-normal",
-                    "transition-all hover:text-emerald-900 dark:hover:text-emerald-100 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/30 rounded-md flex align-middle relative py-1 px-2"
+                    "transition-all hover:text-emerald-900 dark:hover:text-emerald-100 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/30 rounded-md flex align-middle relative py-1 px-1 sm:px-2"
                   )}
                 >
                   {name}
@@ -72,7 +78,7 @@ export const Header = () => {
                 href="/CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-normal transition-all hover:text-emerald-900 dark:hover:text-emerald-100 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/30 rounded-md flex align-middle relative py-1 px-2"
+                className="font-normal transition-all hover:text-emerald-900 dark:hover:text-emerald-100 hover:bg-emerald-50/60 dark:hover:bg-emerald-950/30 rounded-md flex align-middle relative py-1 px-1 sm:px-2"
               >
                 cv
               </a>

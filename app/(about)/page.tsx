@@ -1,4 +1,4 @@
-import { PublicationCard } from "@/components/publication-card";
+import { SelectedPaper } from "@/components/publication-card";
 import Container from "@/components/shared/container";
 import TextLink from "@/components/shared/text-link";
 import Social from "@/components/social";
@@ -45,12 +45,12 @@ function SectionHeading({
 }) {
   return (
     <div className="flex items-baseline justify-between">
-      <h2 className="text-xs uppercase tracking-[0.2em] text-emerald-700/80 dark:text-emerald-400/80">
+      <h2 className="text-base font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
         {label}
       </h2>
       <Link
         href={href}
-        className="text-sm tracking-tight text-neutral-500 transition-colors hover:text-emerald-800 dark:text-neutral-400 dark:hover:text-emerald-300"
+        className="text-sm tracking-tight text-zinc-500 transition-colors hover:text-emerald-800 dark:text-zinc-400 dark:hover:text-emerald-300"
       >
         {linkLabel} →
       </Link>
@@ -97,37 +97,32 @@ export default function About() {
           disasters.
         </p>
       </div>
-      <p className="mt-4 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs tracking-wide text-neutral-500 dark:text-neutral-400">
-        {KEYWORDS.map((keyword, index) => (
-          <span key={keyword} className="whitespace-nowrap">
-            {keyword}
-            {index < KEYWORDS.length - 1 && (
-              <span
-                aria-hidden
-                className="ml-2 text-neutral-300 dark:text-neutral-600"
-              >
-                &middot;
-              </span>
-            )}
-          </span>
+      <ul
+        aria-label="Research interests"
+        className="dot-list mt-4 gap-y-1 text-xs tracking-wide text-zinc-500 dark:text-zinc-400"
+      >
+        {KEYWORDS.map((keyword) => (
+          <li key={keyword}>{keyword}</li>
         ))}
-      </p>
+      </ul>
       <div className="mt-8">
         <Social />
       </div>
-      <section className="mt-12 border-t border-neutral-200 pt-8 dark:border-neutral-800">
+      <section className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
         <SectionHeading
           label="Selected publications"
           href="/publications"
           linkLabel="All publications"
         />
-        <div className="mt-5 space-y-5">
+        <div className="mt-6 divide-y divide-zinc-200 dark:divide-zinc-800">
           {featured.map((pub) => (
-            <PublicationCard key={pub.slug} pub={pub} compact />
+            <div key={pub.slug} className="py-6 first:pt-0 last:pb-0">
+              <SelectedPaper pub={pub} />
+            </div>
           ))}
         </div>
       </section>
-      <section className="mt-10 border-t border-neutral-200 pt-8 dark:border-neutral-800">
+      <section className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
         <SectionHeading label="Recent news" href="/news" linkLabel="All news" />
         <ul className="mt-5 space-y-4">
           {recentNews.map((item, idx) => (
@@ -135,7 +130,7 @@ export default function About() {
               key={idx}
               className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:gap-6"
             >
-              <span className="shrink-0 font-mono text-xs uppercase tracking-wider text-neutral-400 dark:text-neutral-500 sm:w-20">
+              <span className="shrink-0 text-sm tabular-nums text-zinc-500 dark:text-zinc-400 sm:w-20">
                 {item.month} {item.year}
               </span>
               <span className="text-[0.95rem] leading-relaxed text-neutral-700 dark:text-neutral-300">

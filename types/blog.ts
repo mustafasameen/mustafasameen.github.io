@@ -10,7 +10,8 @@ export interface Publication {
     coFirstAuthors?: string;
     year?: string;
     order?: string; // rank within a year; lower shows first
-    image?: string;
+    image?: string; // teaser figure shown in "Selected publications"
+    summary?: string; // one-line description shown next to the figure
     featured?: string;
   };
   content: string;

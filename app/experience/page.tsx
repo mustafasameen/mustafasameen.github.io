@@ -57,7 +57,6 @@ export default function Experience() {
   return (
     <Container size="large" className="container animate-enter">
       <PageHeader
-        eyebrow="Experience"
         title="Where I've worked"
         subtitle="Research roles and what I worked on in each one."
       />
@@ -84,7 +83,7 @@ export default function Experience() {
                     role.org
                   )}
                 </h2>
-                <time className="shrink-0 font-mono text-xs uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
+                <time className="shrink-0 text-sm tabular-nums text-zinc-500 dark:text-zinc-400">
                   {role.period}
                 </time>
               </header>

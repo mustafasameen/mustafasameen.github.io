@@ -22,17 +22,16 @@ export default function PublicationsPage() {
   return (
     <Container size="large" className="container animate-enter">
       <PageHeader
-        eyebrow="Publications"
         title="Papers & preprints"
         subtitle="* denotes equal contribution"
       />
       <div className="space-y-12">
         {years.map((year) => (
-          <section key={year} className="flex flex-col gap-4 sm:flex-row sm:gap-10">
-            <h2 className="shrink-0 font-mono text-sm font-semibold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 sm:w-16 sm:pt-0.5">
+          <section key={year} className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+            <h2 className="shrink-0 text-sm font-semibold tabular-nums text-emerald-700 dark:text-emerald-400 sm:w-16 sm:pt-0.5">
               {year}
             </h2>
-            <div className="flex-1 space-y-10">
+            <div className="min-w-0 flex-1 space-y-10">
               {publications
                 .filter((pub) => pub.metadata.year?.trim() === year)
                 .map((pub) => (
