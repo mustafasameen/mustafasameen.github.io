@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 type RevealState = "idle" | "armed" | "shown";
 
 /**
- * Paper figure in a white card. Below the fold it draws in left to right the
- * first time it scrolls into view (skipped under prefers-reduced-motion);
+ * Paper figure in a white card. Below the fold it fades in and comes into
+ * focus the first time it scrolls into view (skipped under prefers-reduced-motion);
  * clicking it opens the full figure in a dialog.
  */
 export default function FigureThumb({

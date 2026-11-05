@@ -208,14 +208,21 @@ button:focus-visible {
   }
 }
 
-/* Paper figures draw in left to right once (see components/figure-thumb.tsx). */
+/* Paper figures fade in and come into focus once (see components/figure-thumb.tsx). */
 .fig-reveal[data-state="armed"] {
-  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+  filter: blur(6px);
+  transform: scale(1.02);
 }
 
 .fig-reveal[data-state="shown"] {
-  clip-path: inset(0 0 0 0);
-  transition: clip-path 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  opacity: 1;
+  filter: blur(0);
+  transform: none;
+  transition:
+    opacity 0.7s ease-out,
+    filter 0.9s ease-out,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fig-dialog[open] {
