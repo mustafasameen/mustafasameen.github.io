@@ -1,4 +1,5 @@
 import { SelectedPaper } from "@/components/publication-card";
+import ResearchThemes from "@/components/research-themes";
 import Container from "@/components/shared/container";
 import TextLink from "@/components/shared/text-link";
 import Social from "@/components/social";
@@ -16,6 +17,10 @@ const structuredData = {
   worksFor: {
     "@type": "Organization",
     name: "University of Florida",
+  },
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Colorado College",
   },
   url: SITE_URL,
   sameAs: [
@@ -78,6 +83,10 @@ export default function About() {
           <TextLink href="https://faculty.eng.ufl.edu/sermos-lab/">
             SERMoS Lab
           </TextLink>
+          , and I am also pursuing an{" "}
+          <TextLink href="https://msais.eng.ufl.edu">
+            M.S. in Artificial Intelligence Systems
+          </TextLink>
           . Before that, I graduated from{" "}
           <TextLink href="https://www.coloradocollege.edu">
             Colorado College
@@ -99,7 +108,7 @@ export default function About() {
       </div>
       <ul
         aria-label="Research interests"
-        className="dot-list mt-4 gap-y-1 text-xs tracking-wide text-zinc-500 dark:text-zinc-400"
+        className="dot-list mt-4 max-w-[15rem] gap-y-1 sm:max-w-[22.5rem] text-xs text-zinc-500 dark:text-zinc-400"
       >
         {KEYWORDS.map((keyword) => (
           <li key={keyword}>{keyword}</li>
@@ -108,6 +117,16 @@ export default function About() {
       <div className="mt-8">
         <Social />
       </div>
+      <section className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
+        <SectionHeading
+          label="Research"
+          href="/experience"
+          linkLabel="Experience"
+        />
+        <div className="mt-6">
+          <ResearchThemes />
+        </div>
+      </section>
       <section className="mt-12 border-t border-zinc-200 pt-8 dark:border-zinc-800">
         <SectionHeading
           label="Selected publications"

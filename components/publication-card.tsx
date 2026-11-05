@@ -1,5 +1,5 @@
 import type { Publication } from "@/types/blog";
-import Image from "next/image";
+import FigureThumb from "./figure-thumb";
 
 function renderAuthors(authors: string, coFirstAuthors: string) {
   const coFirstSet = new Set(
@@ -79,7 +79,7 @@ export function PublicationCard({ pub }: { pub: Publication }) {
   return (
     <article className="grid grid-cols-1 gap-3 sm:grid-cols-[8.5rem_minmax(0,1fr)] sm:gap-5">
       {image ? (
-        <Thumb src={image} href={href} sizes="136px" className="hidden sm:block" />
+        <FigureThumb src={image} caption={meta.title} sizes="136px" className="hidden sm:block" />
       ) : (
         // Keep text aligned with the rows that have a figure.
         <div aria-hidden="true" className="hidden sm:block" />
@@ -108,46 +108,6 @@ export function PublicationCard({ pub }: { pub: Publication }) {
   );
 }
 
-/** Paper figure in a white card; links to the paper but stays out of tab order. */
-function Thumb({
-  src,
-  href,
-  sizes,
-  className = "block",
-}: {
-  src: string;
-  href?: string;
-  sizes: string;
-  className?: string;
-}) {
-  const img = (
-    <Image
-      src={src}
-      alt=""
-      width={960}
-      height={480}
-      sizes={sizes}
-      className="aspect-[2/1] h-auto w-full object-contain dark:brightness-[0.9]"
-    />
-  );
-  const cls =
-    `${className} self-start rounded-lg border border-zinc-200 bg-white p-1.5 dark:border-zinc-800`;
-  return href ? (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      tabIndex={-1}
-      aria-hidden="true"
-      className={`${cls} transition-colors hover:border-emerald-300 dark:hover:border-emerald-700/70`}
-    >
-      {img}
-    </a>
-  ) : (
-    <div className={cls}>{img}</div>
-  );
-}
-
 /** Figure-led row for "Selected publications" on the home page. */
 export function SelectedPaper({ pub }: { pub: Publication }) {
   const meta = pub.metadata;
@@ -157,7 +117,7 @@ export function SelectedPaper({ pub }: { pub: Publication }) {
   return (
     <article className="grid grid-cols-1 gap-4 sm:grid-cols-[12.5rem_minmax(0,1fr)] sm:gap-6">
       {image && (
-        <Thumb src={image} href={href} sizes="(min-width: 640px) 200px, 100vw" />
+        <FigureThumb src={image} caption={meta.title} sizes="(min-width: 640px) 200px, 100vw" />
       )}
       <div className="min-w-0">
         <h3 className="text-pretty font-semibold leading-snug tracking-tight text-zinc-900 dark:text-zinc-100">

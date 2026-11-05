@@ -45,7 +45,7 @@ export const Header = () => {
                 Mustafa Sameen
               </span>
               <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                PhD student
+                PhD student · M.S. in AI Systems
               </span>
               <span className="text-sm text-neutral-500 dark:text-neutral-400">
                 University of Florida
