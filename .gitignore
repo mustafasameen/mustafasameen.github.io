@@ -41,3 +41,7 @@ package-lock.json
 # package manager caches
 .npm-cache
 .pnpm-store
+
+# impeccable (per-machine consent and cache; config.json is shared)
+.impeccable/config.local.json
+.impeccable/hook.cache.json

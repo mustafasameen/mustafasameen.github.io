@@ -84,6 +84,17 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* No one-word last lines in body copy; headings break evenly. */
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
 }
 
 a:focus-visible,
